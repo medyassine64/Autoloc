@@ -1,0 +1,26 @@
+package tn.esprit.yassinejouini4IET.Domain;
+
+import jakarta.persistence.*;
+import lombok.*;
+import java.time.LocalDate;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Maintenance {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idMaintenance;
+
+    private LocalDate dateDebut;
+    private LocalDate dateFin;
+    private String description;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "vehicule_id")
+    @ToString.Exclude
+    private Vehicule vehicule;
+}
