@@ -55,4 +55,6 @@ public class Vehicule implements Serializable {
     @ToString.Exclude
     @Builder.Default
     private List<Reservation> reservations = new ArrayList<>();
+
+
 }
