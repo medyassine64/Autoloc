@@ -41,4 +41,14 @@ public class VehiculeServiceImpl implements IVehiculeService {
     public List<Vehicule> findAll() {
         return List.of();
     }
+
+    @Override
+    public Vehicule findById(Long id) {
+        return null;
+    }
+
+    @Override
+    public void delete(Long id) {
+
+    }
 }
